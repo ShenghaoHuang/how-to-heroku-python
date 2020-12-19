@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 pagehtml = """
 <!doctype html>
@@ -64,3 +64,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return pagehtml
+
+@app.route("/sheng")
+def sheng():
+    return render_template('sheng.html')
